@@ -11,6 +11,8 @@ import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
 import "./layout.css"
+import "@fontsource/source-sans-pro"
+import "@fontsource/source-serif-pro"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -26,19 +28,77 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div style={{}}>
         <main>{children}</main>
         <footer
           style={{
-            marginTop: `2rem`,
+            background: `#E4DCFF`,
+            padding: `64px 24px`,
+            fontFamily: `Source Sans Pro`,
+            fontWeight: `400`,
+            size: `20px`,
           }}
-        ></footer>
+        >
+          <div
+            style={{
+              maxWidth: `954px`,
+              margin: `auto`,
+              padding: `0 24px`,
+            }}
+          >
+            <h2
+              style={{
+                fontFamily: `Source Serif Pro`,
+                fontWeight: `600`,
+                fontSize: `28px`,
+              }}
+              id="contact"
+            >
+              💌 Drop me an email
+            </h2>
+            <a
+              href="mailto:charlotte.sferruzza@gmail.com"
+              style={{
+                fontWeight: `400`,
+                fontSize: `20px`,
+              }}
+            >
+              charlotte.sferruzza@gmail.com
+            </a>
+            <div
+              style={{
+                display: `flex`,
+                fontWeight: `400`,
+                fontSize: `20px`,
+                marginTop: `4px`,
+              }}
+            >
+              <p
+                style={{
+                  display: `flex`,
+                  fontWeight: `400`,
+                  fontSize: `20px`,
+                  margin: 0,
+                }}
+              >
+                or
+              </p>
+              <a
+                href="https://www.linkedin.com/in/chasferruzza/"
+                style={{
+                  display: `flex`,
+                  fontFamily: `Source Sans Pro`,
+                  fontWeight: `400`,
+                  fontSize: `20px`,
+                  marginLeft: `4px`,
+                  textDecoration: `underline`,
+                }}
+              >
+                find me on LinkedIn
+              </a>
+            </div>
+          </div>
+        </footer>
       </div>
     </>
   )

@@ -1,0 +1,10 @@
+.about-container {
+  width: 100%;
+  padding: 64px 24px;
+  max-width: 954px;
+  margin: auto;
+}
+
+.heading {
+  font-size: 28px;
+}

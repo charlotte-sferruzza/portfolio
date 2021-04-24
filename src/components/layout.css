@@ -4,14 +4,15 @@ html {
   font: 112.5%/1.45em georgia, serif, sans-serif;
   box-sizing: border-box;
   overflow-y: scroll;
+  scroll-behavior: smooth;
 }
 body {
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
-  font-family: georgia, serif;
-  font-weight: normal;
+  color: #2b2d33;
+  font-family: "Source Sans Pro";
+  font-weight: 400;
   word-wrap: break-word;
   font-kerning: normal;
   -moz-font-feature-settings: "kern", "liga", "clig", "calt";
@@ -33,6 +34,9 @@ section,
 summary {
   display: block;
 }
+main {
+  background: #f8f7ff;
+}
 audio,
 canvas,
 progress,
@@ -52,6 +56,7 @@ template {
 }
 a {
   background-color: transparent;
+  text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
@@ -398,6 +403,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-size: 20px;
 }
 pre {
   margin-left: 0;
