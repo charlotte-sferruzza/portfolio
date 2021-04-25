@@ -46,21 +46,13 @@ const Layout = ({ children }) => {
               padding: `0 24px`,
             }}
           >
-            <h2
-              style={{
-                fontFamily: `Source Serif Pro`,
-                fontWeight: `600`,
-                fontSize: `28px`,
-              }}
-              id="contact"
-            >
-              💌 Drop me an email
-            </h2>
+            <h2 id="contact">💌 Drop me an email</h2>
             <a
               href="mailto:charlotte.sferruzza@gmail.com"
               style={{
                 fontWeight: `400`,
                 fontSize: `20px`,
+                textDecoration: `underline`,
               }}
             >
               charlotte.sferruzza@gmail.com
