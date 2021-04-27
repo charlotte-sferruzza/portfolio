@@ -1,9 +1,12 @@
+.case-study-outer-container {
+  background: rgba(255, 255, 255, 0.5);
+}
+
 .case-study-container {
   width: 100%;
   padding: 64px 24px;
   max-width: 954px;
   margin: auto;
-  background: #e4dcff;
 }
 
 .blog-post-container {

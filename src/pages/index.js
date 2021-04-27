@@ -8,13 +8,22 @@ import Hero from "../components/Hero"
 import Work from "../components/Work"
 import Blog from "../components/Blog"
 import About from "../components/About"
+import Shapes from "../components/shapes"
 
 const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
-    <Hero />
-    <Work />
-    <About />
+    {/* <Shapes /> */}
+    <div
+      style={{
+        position: `relative`,
+        zIndex: 1,
+      }}
+    >
+      <Hero />
+      <Work />
+      <About />
+    </div>
   </Layout>
 )
 

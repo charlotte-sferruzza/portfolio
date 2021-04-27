@@ -1,0 +1,29 @@
+.shapes {
+  height: 100%;
+  width: 1700px;
+  position: absolute;
+  z-index: 0;
+  left: -500px;
+  right: 0;
+  margin: auto;
+}
+
+.first-circle {
+  width: 1284px;
+  height: 1596px;
+  background: #ffeedd;
+  position: absolute;
+  top: 600px;
+  right: -50%;
+  border-radius: 100%;
+}
+
+.second-circle {
+  width: 1284px;
+  height: 1596px;
+  background: #ffeedd;
+  position: absolute;
+  top: 2000px;
+  left: -50%;
+  border-radius: 100%;
+}

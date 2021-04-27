@@ -8,8 +8,7 @@ const Hero = () => {
         <h1 className="heading">Charlotte Sferruzza</h1>
         <p className="subtitle">
           I’m a Senior Product Designer based in London. I’m passionate about
-          solving problems, building delightful experiences, and supporting
-          fantastic design teams.
+          solving problems and building delightful experiences.
         </p>
       </div>
       <div className="button-container">

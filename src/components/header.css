@@ -2,6 +2,12 @@
   height: 100px;
   position: absolute;
   width: 100%;
+  z-index: 2;
+  max-width: 954px;
+  padding: 0 24px;
+  left: 0;
+  right: 0;
+  margin: auto;
 }
 
 .navigation {
@@ -9,7 +15,6 @@
   justify-content: flex-end;
   list-style-type: none;
   padding-top: 62px;
-  padding-right: 121px;
   margin: 0;
 }
 
@@ -45,7 +50,6 @@ a {
   .navigation {
     justify-content: flex-start;
     padding-top: 24px;
-    padding-left: 24px;
     margin: 0;
   }
   .navigation-item:not(:first-child) {

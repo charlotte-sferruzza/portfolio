@@ -36,6 +36,8 @@ summary {
 }
 main {
   background: #f8f7ff;
+  overflow: hidden;
+  position: relative;
 }
 audio,
 canvas,

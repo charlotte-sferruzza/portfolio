@@ -37,6 +37,8 @@ const Layout = ({ children }) => {
             fontFamily: `Source Sans Pro`,
             fontWeight: `400`,
             size: `20px`,
+            zIndex: 1,
+            position: `relative`,
           }}
         >
           <div
