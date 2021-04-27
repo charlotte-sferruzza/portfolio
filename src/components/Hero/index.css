@@ -1,7 +1,7 @@
 .hero-container {
   height: 100vh;
   width: 100%;
-  padding: 300px 24px 0;
+  padding: calc(50vh - 170px) 24px 0;
   max-width: 954px;
   margin: 0 auto;
   display: flex;

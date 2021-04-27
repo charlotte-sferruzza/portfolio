@@ -1,8 +1,10 @@
 .about-container {
   width: 100%;
-  padding: 64px 24px;
-  max-width: 954px;
+  padding: 64px 144px;
+  max-width: 1198px;
   margin: auto;
+  background: white;
+  box-shadow: 2px 2px 20px #88888821;
 }
 
 .about-text {

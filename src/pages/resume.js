@@ -10,28 +10,17 @@ import Blog from "../components/Blog"
 import About from "../components/About"
 import Shapes from "../components/shapes"
 
-const IndexPage = () => (
+const Resume = () => (
   <Layout>
-    <Seo title="Home" />
+    <Seo title="Resume" />
     {/* <Shapes /> */}
     <div
       style={{
         position: `relative`,
         zIndex: 1,
       }}
-    >
-      <Hero />
-      <div
-        style={{
-          padding: `80px 0`,
-          background: `rgba(255, 255, 255, 0.5)`,
-        }}
-      >
-        <Work />
-        <About />
-      </div>
-    </div>
+    ></div>
   </Layout>
 )
 
-export default IndexPage
+export default Resume
