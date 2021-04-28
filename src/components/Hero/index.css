@@ -28,9 +28,10 @@
   font-weight: 600;
   font-size: 24px;
   cursor: pointer;
+  text-decoration: none;
 }
 
-/* .read-more::before {
+.read-more::before {
   content: "";
   width: calc(100% + 4px);
   height: 8px;
@@ -46,7 +47,7 @@
   margin-bottom: -25px;
   height: 23px;
   transition: 0.3s;
-} */
+}
 
 .read-more::after {
   content: "";

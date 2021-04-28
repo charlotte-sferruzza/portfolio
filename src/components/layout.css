@@ -268,13 +268,13 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 16px;
   color: inherit;
   font-family: "Source Serif Pro";
   font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 28px;
-  line-height: 1.1;
+  line-height: 40px;
 }
 h3 {
   margin-left: 0;
@@ -355,7 +355,7 @@ hgroup {
   margin-bottom: 1.45rem;
 }
 ul {
-  margin-left: 1.45rem;
+  margin-left: 0;
   margin-right: 0;
   margin-top: 0;
   padding-bottom: 0;
@@ -500,6 +500,8 @@ th {
 }
 li {
   font-size: 20px;
+  line-height: 32px;
+  list-style: none;
 }
 li:not(:last-child) {
   margin-bottom: calc(1.45rem / 2);

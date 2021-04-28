@@ -41,7 +41,7 @@ const LinkContainer = styled.div`
   margin-bottom: 24px;
 `
 
-const Link = styled.div`
+const Link = styled.a`
   border: none;
   background: none;
   font-weight: 600;

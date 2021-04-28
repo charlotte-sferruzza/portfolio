@@ -31,7 +31,7 @@ const Container = styled.div`
 
 const ContrastContainer = styled.div`
   width: 100%;
-  padding: 64px 144px;
+  padding: 64px 0;
   max-width: 1198px;
   margin: auto;
   background: white;
@@ -39,7 +39,18 @@ const ContrastContainer = styled.div`
   margin-bottom: 40px;
 `
 
-const SubHeading = styled.h2``
+const SubHeading = styled.h2(
+  ({ isInContrast }) => `
+  ${
+    isInContrast &&
+    `
+    max-width: 960px;
+    margin: auto;
+    padding: 0 24px;
+    `
+  }
+`
+)
 
 const IndexPage = () => (
   <Layout isHomePage>
@@ -61,18 +72,20 @@ const IndexPage = () => (
       </ContentContainer>
       <ContentContainer>
         <ContrastContainer id="about">
-          <SubHeading>{content.page.home.about.title}</SubHeading>
-          <Block list={content.page.home.about.list} />
+          <SubHeading isInContrast>{content.page.home.about.title}</SubHeading>
+          <Block list={content.page.home.about.list} listSpacing />
         </ContrastContainer>
       </ContentContainer>
-      <ContentContainer>
-        <ContrastContainer id="resume">
-          <SubHeading>{content.page.home.resume.title}</SubHeading>
-          {content.page.home.resume.list.map((item, index) => (
-            <Block {...item} key={index} isSmaller />
-          ))}
-        </ContrastContainer>
-      </ContentContainer>
+      {false && (
+        <ContentContainer>
+          <ContrastContainer id="resume">
+            <SubHeading>{content.page.home.resume.title}</SubHeading>
+            {content.page.home.resume.list.map((item, index) => (
+              <Block {...item} key={index} isSmaller />
+            ))}
+          </ContrastContainer>
+        </ContentContainer>
+      )}
     </PageContainer>
 
     {/* <Work />
