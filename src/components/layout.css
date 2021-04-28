@@ -60,6 +60,10 @@ a {
   background-color: transparent;
   text-decoration: none;
   -webkit-text-decoration-skip: objects;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: underline;
+  color: black;
 }
 a:active,
 a:hover {
@@ -358,7 +362,7 @@ ul {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin-bottom: 0;
   list-style-position: outside;
   list-style-image: none;
 }
@@ -495,6 +499,9 @@ th {
   font-weight: bold;
 }
 li {
+  font-size: 20px;
+}
+li:not(:last-child) {
   margin-bottom: calc(1.45rem / 2);
 }
 ol li {

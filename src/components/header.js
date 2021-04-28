@@ -3,17 +3,28 @@ import PropTypes from "prop-types"
 import { Link } from "gatsby"
 import "./header.css"
 
-const Header = ({ siteTitle }) => (
+const Header = ({ siteTitle, isHomePage }) => (
   <header className="header">
     <ul className="navigation">
       <li className="navigation-item">
-        <Link to="#work">Work</Link>
+        <Link className="header-link" to={isHomePage ? "#work" : "/"}>
+          Work
+        </Link>
       </li>
       <li className="navigation-item">
-        <Link to="#about">About</Link>
+        <Link className="header-link" to={isHomePage ? "#about" : "/"}>
+          About
+        </Link>
       </li>
       <li className="navigation-item">
-        <Link to="#contact">Contact</Link>
+        <Link className="header-link" to={isHomePage ? "#resume" : "/resume"}>
+          Resume
+        </Link>
+      </li>
+      <li className="navigation-item">
+        <Link className="header-link" to={isHomePage ? "#contact" : "/"}>
+          Contact
+        </Link>
       </li>
     </ul>
   </header>

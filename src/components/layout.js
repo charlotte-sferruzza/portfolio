@@ -14,7 +14,7 @@ import "./layout.css"
 import "@fontsource/source-sans-pro"
 import "@fontsource/source-serif-pro"
 
-const Layout = ({ children }) => {
+const Layout = ({ isHomePage = false, children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -27,7 +27,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header
+        siteTitle={data.site.siteMetadata?.title || `Title`}
+        isHomePage={isHomePage}
+      />
       <div style={{}}>
         <main>{children}</main>
         <footer

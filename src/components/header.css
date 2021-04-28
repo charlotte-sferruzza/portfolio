@@ -41,10 +41,11 @@
   transition: 0.3s;
 }
 
-a {
+.header-link {
   color: black;
   font-size: 28px;
   font-weight: 600;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 800px) {
@@ -56,7 +57,7 @@ a {
   .navigation-item:not(:first-child) {
     margin-left: 36px;
   }
-  a {
+  .header-link {
     font-size: 22px;
     font-weight: 600;
   }
