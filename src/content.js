@@ -117,7 +117,7 @@ export default {
         ],
         link: {
           text: "Read my full CV",
-          link: "/",
+          link: "/resume",
         },
       },
     },

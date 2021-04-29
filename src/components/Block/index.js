@@ -3,21 +3,27 @@ import { Link } from "gatsby"
 import styled from "@emotion/styled"
 
 const Container = styled.div(
-  ({ isSmaller, listSpacing }) => `
+  ({ isSmaller, listSpacing, description }) => `
   height: fit-content;
   max-width: 820px;
-  margin-bottom: ${isSmaller ? `24px` : `64px`};
   &:last-child {
     margin-bottom: 0;
   }
-    ${
-      listSpacing &&
-      `
-      max-width: 960px;
-      margin: auto;
-      padding: 0 24px;
-      `
-    }
+  margin-bottom: ${isSmaller ? `24px` : `64px`};
+  ${
+    listSpacing &&
+    `
+    max-width: 960px;
+    margin: auto;
+    padding: 0 24px;
+    `
+  }
+  ${
+    !description &&
+    `
+    margin: 0 auto 32px;
+    `
+  }
   & li:not(:last-child) {
     margin-bottom: ${listSpacing ? "32px" : 0};
   }
@@ -27,14 +33,15 @@ const Container = styled.div(
 const Title = styled.h2(
   ({ isSmaller }) => `
   font-size: ${isSmaller ? "20px" : "28px"};
+  line-height: ${isSmaller ? "24px" : "45px"};
   margin-bottom: 12px;
 `
 )
 
 const SubTitle = styled.p(
-  ({ listSpacing }) => `
+  ({ listSpacing, description }) => `
   font-size: 18px;
-  margin-bottom: 12px;
+  margin-bottom: ${description ? "12px" : 0};
 `
 )
 
@@ -45,7 +52,7 @@ const Description = styled.p`
 const Block = ({
   title,
   date,
-  description,
+  description = false,
   linkText,
   link,
   list = false,
@@ -53,11 +60,19 @@ const Block = ({
   isSmaller = false,
   listSpacing = false,
 }) => {
+  console.log(title, isSmaller)
   return (
-    <Container id={`#${id}`} isSmaller={isSmaller} listSpacing={listSpacing}>
+    <Container
+      id={`#${id}`}
+      isSmaller={isSmaller}
+      listSpacing={listSpacing}
+      description={description}
+    >
       <Title isSmaller={isSmaller}>{title}</Title>
-      <SubTitle listSpacing={listSpacing}>{date}</SubTitle>
-      <p className="blog-description">{description}</p>
+      <SubTitle listSpacing={listSpacing} description={description}>
+        {date}
+      </SubTitle>
+      {description && <p className="blog-description">{description}</p>}
       {list && (
         <ul>
           {list.map(item => (

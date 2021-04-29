@@ -16,13 +16,11 @@ const Header = ({ siteTitle, isHomePage }) => (
           About
         </Link>
       </li>
-      {false && (
-        <li className="navigation-item">
-          <Link className="header-link" to={isHomePage ? "#resume" : "/resume"}>
-            Resume
-          </Link>
-        </li>
-      )}
+      <li className="navigation-item">
+        <Link className="header-link" to={isHomePage ? "#resume" : "/resume"}>
+          Resume
+        </Link>
+      </li>
       <li className="navigation-item">
         <Link className="header-link" to={isHomePage ? "#contact" : "/"}>
           Contact
