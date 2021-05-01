@@ -11,6 +11,7 @@ import Blog from "../components/Blog"
 import About from "../components/About"
 import Block from "../components/Block"
 import content from "../content"
+import Shapes from "../components/shapes"
 
 const PageContainer = styled.div`
   position: relative;
@@ -21,7 +22,10 @@ const ContentContainer = styled.div`
   position: relative;
   z-index: 1;
   background: rgba(255, 255, 255, 0.5);
-  padding-bottom: 40px;
+  padding-bottom: 32px;
+  &:last-child {
+    padding-bottom: 64px;
+  }
 `
 
 const Container = styled.div`
@@ -85,42 +89,42 @@ const ResumeLink = styled.div`
   }
 `
 
-const Shapes = styled.div`
-  width: 1700px;
-  position: absolute;
-  z-index: 0;
-  left: -500px;
-  right: 0;
-  margin: auto; */
-`
+// const Shapes = styled.div`
+//   width: 1700px;
+//   position: absolute;
+//   z-index: 0;
+//   left: -500px;
+//   right: 0;
+//   margin: auto; */
+// `
 
-const Shape = styled.div`
-  position: absolute;
-  width: 1284px;
-  height: 1596px;
-  background: #ffeedd;
-  top: 750px;
-  right: -50%;
-  border-radius: 100%;
-`
+// const Shape = styled.div`
+//   position: absolute;
+//   width: 1284px;
+//   height: 1596px;
+//   background: #ffeedd;
+//   top: 750px;
+//   right: -50%;
+//   border-radius: 100%;
+// `
 
-const Shape2 = styled.div`
-  position: absolute;
-  width: 1284px;
-  height: 1596px;
-  background: #ffeedd;
-  top: 2000px;
-  left: -25%;
-  border-radius: 100%;
-`
+// const Shape2 = styled.div`
+//   position: absolute;
+//   width: 1284px;
+//   height: 1596px;
+//   background: #ffeedd;
+//   top: 2000px;
+//   left: -25%;
+//   border-radius: 100%;
+// `
 
 const IndexPage = () => (
   <Layout isHomePage>
     <Seo title="Home" />
-    <Shapes>
-      <Shape />
+    <Shapes />
+    {/* <Shape />
       <Shape2 />
-    </Shapes>
+    </Shapes> */}
     <PageContainer>
       <Hero
         title={content.page.home.hero.title}

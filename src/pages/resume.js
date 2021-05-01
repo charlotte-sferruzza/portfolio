@@ -7,6 +7,7 @@ import Seo from "../components/seo"
 import Hero from "../components/Hero"
 import Block from "../components/Block"
 import content from "../content"
+import Shapes from "../components/shapes"
 
 const PageContainer = styled.div`
   position: relative;
@@ -16,6 +17,7 @@ const PageContainer = styled.div`
 const ContentContainer = styled.div`
   position: relative;
   z-index: 1;
+  background: rgba(255, 255, 255, 0.5);
 `
 
 const Container = styled.div`
@@ -30,6 +32,7 @@ const SubHeading = styled.div``
 const Resume = () => (
   <Layout>
     <Seo title="Resume" />
+    <Shapes />
     <PageContainer>
       <Hero
         condensed

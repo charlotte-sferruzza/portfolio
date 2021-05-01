@@ -7,13 +7,13 @@ const Container = styled.div(
     `
     width: 100%;
     height: ${condensed ? `auto` : `100vh`};
-    padding: ${condensed ? `210px 24px 80px` : `calc(50vh - 170px) 24px 0`};
+    padding: ${condensed ? `210px 24px 80px` : `0 24px`};
     max-width: 954px;
     margin: 0 auto;
+    position: relative;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column; 
-    background: 
+    align-items: center;
+    justify-content: center;
   `
 )
 
@@ -34,10 +34,11 @@ const Subtitle = styled.div`
 `
 
 const LinkContainer = styled.div`
+  position: absolute;
+  bottom: 0;
   height: 75px;
   display: flex;
   justify-content: center;
-  bottom: 10%;
   margin-bottom: 24px;
 `
 

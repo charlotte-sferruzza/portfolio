@@ -9,7 +9,7 @@ const Container = styled.div(
   &:last-child {
     margin-bottom: 0;
   }
-  margin-bottom: ${isSmaller ? `24px` : `64px`};
+  margin-bottom: ${isSmaller ? `32px` : `64px`};
   ${
     listSpacing &&
     `
@@ -33,21 +33,35 @@ const Container = styled.div(
 const Title = styled.h2(
   ({ isSmaller }) => `
   font-size: ${isSmaller ? "20px" : "28px"};
-  line-height: ${isSmaller ? "24px" : "45px"};
-  margin-bottom: 12px;
+  line-height: ${isSmaller ? "32px" : "40px"};
+  font-weight: ${isSmaller ? "700" : "600"}; 
+  margin-bottom: 4px;
 `
 )
 
 const SubTitle = styled.p(
   ({ listSpacing, description }) => `
   font-size: 18px;
-  margin-bottom: ${description ? "12px" : 0};
+  line-height: 28px;
+  margin-bottom: ${description ? "8px" : 0};
 `
 )
 
 const Description = styled.p`
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 `
+
+const List = styled.ul(
+  ({ listSpacing }) => `
+  margin-left: ${listSpacing ? 0 : "24px"};
+`
+)
+
+const ListItem = styled.li(
+  ({ listSpacing }) => `
+  list-style: ${listSpacing ? "none" : "unset"};
+`
+)
 
 const Block = ({
   title,
@@ -60,7 +74,7 @@ const Block = ({
   isSmaller = false,
   listSpacing = false,
 }) => {
-  console.log(title, isSmaller)
+  console.log(listSpacing)
   return (
     <Container
       id={`#${id}`}
@@ -72,11 +86,13 @@ const Block = ({
       <SubTitle listSpacing={listSpacing} description={description}>
         {date}
       </SubTitle>
-      {description && <p className="blog-description">{description}</p>}
+      {description && (
+        <Description className="blog-description">{description}</Description>
+      )}
       {list && (
-        <ul>
+        <List listSpacing={listSpacing}>
           {list.map(item => (
-            <li>
+            <ListItem listSpacing={listSpacing}>
               {item.link ? (
                 <>
                   <Link to={item.link}>{`${item.text}`}</Link>
@@ -85,9 +101,9 @@ const Block = ({
               ) : (
                 <>{item.text}</>
               )}
-            </li>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       )}
       {link && (
         <div className="blog-link-container">

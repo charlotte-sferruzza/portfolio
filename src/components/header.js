@@ -7,22 +7,25 @@ const Header = ({ siteTitle, isHomePage }) => (
   <header className="header">
     <ul className="navigation">
       <li className="navigation-item">
-        <Link className="header-link" to={isHomePage ? "#work" : "/"}>
+        <Link className="header-link" to={isHomePage ? "#work" : "/#work"}>
           Work
         </Link>
       </li>
       <li className="navigation-item">
-        <Link className="header-link" to={isHomePage ? "#about" : "/"}>
+        <Link className="header-link" to={isHomePage ? "#about" : "/#about"}>
           About
         </Link>
       </li>
       <li className="navigation-item">
-        <Link className="header-link" to={isHomePage ? "#resume" : "/resume"}>
+        <Link className="header-link" to={"/resume"}>
           Resume
         </Link>
       </li>
       <li className="navigation-item">
-        <Link className="header-link" to={isHomePage ? "#contact" : "/"}>
+        <Link
+          className="header-link"
+          to={isHomePage ? "#contact" : "/#contact"}
+        >
           Contact
         </Link>
       </li>

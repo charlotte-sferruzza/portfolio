@@ -1,11 +1,40 @@
 import React from "react"
-import "./shapes.css"
+import styled from "@emotion/styled"
+
+const Container = styled.div`
+  width: 1700px;
+  position: absolute;
+  z-index: 0;
+  left: -500px;
+  right: 0;
+  margin: auto; */
+`
+
+const Shape = styled.div`
+  position: absolute;
+  width: 1284px;
+  height: 1596px;
+  background: #ffeedd;
+  top: 750px;
+  right: -50%;
+  border-radius: 100%;
+`
+
+const Shape2 = styled.div`
+  position: absolute;
+  width: 1284px;
+  height: 1596px;
+  background: #ffeedd;
+  top: 2200px;
+  left: -25%;
+  border-radius: 100%;
+`
 
 const Shapes = () => (
-  <div className="shapes">
-    <div className="first-circle"></div>
-    {/* <div className="second-circle"></div> */}
-  </div>
+  <Container>
+    <Shape />
+    <Shape2 />
+  </Container>
 )
 
 export default Shapes
