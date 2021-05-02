@@ -17,11 +17,18 @@ const Container = styled.div(
   `
 )
 
-const TextContainer = styled.div`
+const TextContainer = styled.div(
+  ({ page }) => `
+  ${
+    page === "Home" &&
+    `
   @media (max-width: 450px) {
-    margin-top: -42px;
+    margin-top: -200px;
+  }
+  `
   }
 `
+)
 
 const Subtitle = styled.div`
   font-size: 28px;
@@ -34,6 +41,9 @@ const LinkContainer = styled.div`
   display: flex;
   justify-content: center;
   margin-bottom: 56px;
+  @media (max-width: 450px) {
+    margin-bottom: 180px;
+  }
 `
 
 const Link = styled.a`
@@ -59,10 +69,17 @@ const Link = styled.a`
   }
 `
 
-const Hero = ({ condensed = false, title, subtitle, linkText, link }) => {
+const Hero = ({
+  page = "Home",
+  condensed = false,
+  title,
+  subtitle,
+  linkText,
+  link,
+}) => {
   return (
     <Container condensed={condensed}>
-      <TextContainer>
+      <TextContainer page={page}>
         <h1>{title}</h1>
         <Subtitle>{subtitle}</Subtitle>
       </TextContainer>

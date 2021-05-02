@@ -50,6 +50,7 @@ const Resume = () => (
     <Shapes />
     <PageContainer>
       <Hero
+        page={"Resume"}
         condensed
         title={content.page.resume.hero.title}
         subtitle={content.page.resume.hero.subtitle}
