@@ -106,7 +106,7 @@ const Block = ({
           ))}
         </List>
       )}
-      {link && <LinkElement text={"Read more 2"} link="/" theme="Orange" />}
+      {link && <LinkElement text={linkText} link={link} theme="Orange" />}
     </Container>
   )
 }

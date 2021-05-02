@@ -21,8 +21,14 @@ const Nav = styled.ul`
   display: flex;
   justify-content: flex-end;
   list-style-type: none;
-  padding-top: 62px;
+  padding-top: 64px;
   margin: 0;
+  @media (max-width: 768px) {
+    padding-top: 42px;
+  }
+  @media (max-width: 450px) {
+    display: none;
+  }
 `
 
 const NavItem = styled.li`

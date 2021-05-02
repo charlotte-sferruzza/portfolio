@@ -17,6 +17,12 @@ const Container = styled.div(
   `
 )
 
+const TextContainer = styled.div`
+  @media (max-width: 450px) {
+    margin-top: -42px;
+  }
+`
+
 const Subtitle = styled.div`
   font-size: 28px;
   line-height: 45px;
@@ -56,10 +62,10 @@ const Link = styled.a`
 const Hero = ({ condensed = false, title, subtitle, linkText, link }) => {
   return (
     <Container condensed={condensed}>
-      <div>
+      <TextContainer>
         <h1>{title}</h1>
         <Subtitle>{subtitle}</Subtitle>
-      </div>
+      </TextContainer>
       {!condensed && (
         <LinkContainer>
           <LinkElement

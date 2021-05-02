@@ -98,8 +98,9 @@ const ResumeLink = styled.div`
 const IndexPage = () => (
   <Layout isHomePage>
     <Seo title="Home" />
-    {/* <Shapes /> */}
-    {/* <Shape />
+    <Shapes />
+    {/* <Shapes>
+      <Shape />
       <Shape2 />
     </Shapes> */}
     <PageContainer>

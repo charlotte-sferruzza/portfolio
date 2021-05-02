@@ -96,7 +96,7 @@ export default {
           },
           {
             title: "Product designer at Onfido",
-            date: "🇬🇬 London, UK - Mar 2017 → Mar 2019",
+            date: "🇬🇧 London, UK - Mar 2017 → Mar 2019",
           },
           {
             title: "Product designer at DoYouBuzz",
@@ -116,7 +116,7 @@ export default {
           },
         ],
         link: {
-          text: "Read my full CV",
+          text: "Read my full resume",
           link: "/resume",
         },
       },
