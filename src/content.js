@@ -33,7 +33,7 @@ export default {
             title: "Winning trust with words",
             date: "May 2018",
             description:
-              "In my product designer journey, copywriting has always been a challenge. I’ve worked on different types of products in different countries, using different languages, for different audiences.",
+              "UX writing can make or break an experience. I’ve worked on products in different countries, using different languages, for different audiences. Here is what I learnt about good UX writing.",
             linkText: "Read more",
             link:
               "https://medium.com/design-onfido/winning-trust-with-words-d5bece18e76f",
