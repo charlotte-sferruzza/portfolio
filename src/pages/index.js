@@ -5,13 +5,11 @@ import styled from "@emotion/styled"
 
 import Layout from "../components/layout"
 import Seo from "../components/seo"
-import Hero from "../components/Hero"
-import Work from "../components/Work"
-import Blog from "../components/Blog"
-import About from "../components/About"
-import Block from "../components/Block"
+import Hero from "../components/hero"
+import Block from "../components/block"
 import content from "../content"
 import Shapes from "../components/shapes"
+import LinkElement from "../components/link"
 
 const PageContainer = styled.div`
   position: relative;
@@ -66,27 +64,6 @@ const ResumeLink = styled.div`
   max-width: 960px;
   margin: auto;
   padding: 0 24px;
-  & a {
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
-    &:after {
-      content: "";
-      width: 132px;
-      height: 8px;
-      background: #ffcc99;
-      display: block;
-      transition: 0.3s;
-      margin-top: -10px;
-      margin-left: -2px;
-    }
-    &:hover:after {
-      content: "";
-      margin-top: -25px;
-      height: 23px;
-      transition: 0.3s;
-    }
-  }
 `
 
 // const Shapes = styled.div`
@@ -121,7 +98,7 @@ const ResumeLink = styled.div`
 const IndexPage = () => (
   <Layout isHomePage>
     <Seo title="Home" />
-    <Shapes />
+    {/* <Shapes /> */}
     {/* <Shape />
       <Shape2 />
     </Shapes> */}
@@ -153,9 +130,11 @@ const IndexPage = () => (
             <Block {...item} key={index} isSmaller listSpacing />
           ))}
           <ResumeLink>
-            <a href={content.page.home.resume.link.link}>
-              {content.page.home.resume.link.text}
-            </a>
+            <LinkElement
+              text={content.page.home.resume.link.text}
+              link={content.page.home.resume.link.link}
+              theme="Orange"
+            />
           </ResumeLink>
         </ContrastContainer>
       </ContentContainer>

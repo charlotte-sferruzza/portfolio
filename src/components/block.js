@@ -1,6 +1,7 @@
 import React from "react"
 import { Link } from "gatsby"
 import styled from "@emotion/styled"
+import LinkElement from "./link"
 
 const Container = styled.div(
   ({ isSmaller, listSpacing, description }) => `
@@ -105,13 +106,7 @@ const Block = ({
           ))}
         </List>
       )}
-      {link && (
-        <div className="blog-link-container">
-          <a className="blog-link" href={link}>
-            Read more
-          </a>
-        </div>
-      )}
+      {link && <LinkElement text={"Read more 2"} link="/" theme="Orange" />}
     </Container>
   )
 }

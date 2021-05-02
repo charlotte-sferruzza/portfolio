@@ -1,6 +1,6 @@
 import React from "react"
-import "./index.css"
 import styled from "@emotion/styled"
+import LinkElement from "./link"
 
 const Container = styled.div(
   ({ condensed }) =>
@@ -17,17 +17,6 @@ const Container = styled.div(
   `
 )
 
-const Heading = styled.div`
-  height: 100vh;
-  width: 100%;
-  padding: calc(50vh - 170px) 24px 0;
-  max-width: 954px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-`
-
 const Subtitle = styled.div`
   font-size: 28px;
   line-height: 45px;
@@ -36,10 +25,9 @@ const Subtitle = styled.div`
 const LinkContainer = styled.div`
   position: absolute;
   bottom: 0;
-  height: 75px;
   display: flex;
   justify-content: center;
-  margin-bottom: 24px;
+  margin-bottom: 56px;
 `
 
 const Link = styled.a`
@@ -69,12 +57,18 @@ const Hero = ({ condensed = false, title, subtitle, linkText, link }) => {
   return (
     <Container condensed={condensed}>
       <div>
-        <h1 className="heading">{title}</h1>
-        <p className="subtitle">{subtitle}</p>
+        <h1>{title}</h1>
+        <Subtitle>{subtitle}</Subtitle>
       </div>
       {!condensed && (
         <LinkContainer>
-          <Link href={link}>{linkText}</Link>
+          <LinkElement
+            text={linkText}
+            link={link}
+            theme="Orange"
+            size="Medium"
+            hasArrow
+          />
         </LinkContainer>
       )}
     </Container>
