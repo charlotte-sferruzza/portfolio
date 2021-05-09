@@ -27,7 +27,7 @@ module.exports = {
         background_color: `#CDBEFF`,
         theme_color: `#CDBEFF`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/smiley-happy.png`, // This path is relative to the root of the site.
       },
     },
     `gatsby-plugin-gatsby-cloud`,

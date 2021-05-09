@@ -75,7 +75,6 @@ const Block = ({
   isSmaller = false,
   listSpacing = false,
 }) => {
-  console.log(listSpacing)
   return (
     <Container
       id={`#${id}`}

@@ -10,6 +10,7 @@ import Block from "../components/block"
 import content from "../content"
 import Shapes from "../components/shapes"
 import LinkElement from "../components/link"
+import FigmaBoard from "../components/figmaBoard"
 
 const PageContainer = styled.div`
   position: relative;
@@ -33,18 +34,29 @@ const Container = styled.div`
   margin: auto;
 `
 
-const ContrastContainer = styled.div`
+const ContrastContainer = styled.div(
+  ({ noBackground = false }) => `
   width: 100%;
   padding: 64px 0;
   max-width: 1198px;
   margin: auto;
+  background-size: 22px 22px;
+  @media (max-width: 1200px) {
+    padding: 64px 24px;
+  }
+  ${
+    !noBackground &&
+    `
   background: white;
   box-shadow: 2px 2px 20px #88888821;
-
+  
   background: linear-gradient(90deg, white 20px, transparent 1%) center,
-    linear-gradient(white 20px, transparent 1%) center, #dedede;
+  linear-gradient(white 20px, transparent 1%) center, #dedede;
   background-size: 22px 22px;
+  `
+  }
 `
+)
 
 const SubHeading = styled.h2(
   ({ isInContrast }) => `
@@ -66,43 +78,10 @@ const ResumeLink = styled.div`
   padding: 0 24px;
 `
 
-// const Shapes = styled.div`
-//   width: 1700px;
-//   position: absolute;
-//   z-index: 0;
-//   left: -500px;
-//   right: 0;
-//   margin: auto; */
-// `
-
-// const Shape = styled.div`
-//   position: absolute;
-//   width: 1284px;
-//   height: 1596px;
-//   background: #ffeedd;
-//   top: 750px;
-//   right: -50%;
-//   border-radius: 100%;
-// `
-
-// const Shape2 = styled.div`
-//   position: absolute;
-//   width: 1284px;
-//   height: 1596px;
-//   background: #ffeedd;
-//   top: 2000px;
-//   left: -25%;
-//   border-radius: 100%;
-// `
-
 const IndexPage = () => (
   <Layout isHomePage>
     <Seo title="Home" />
     <Shapes />
-    {/* <Shapes>
-      <Shape />
-      <Shape2 />
-    </Shapes> */}
     <PageContainer>
       <Hero
         title={content.page.home.hero.title}
@@ -110,9 +89,11 @@ const IndexPage = () => (
         linkText={content.page.home.hero.linkText}
         link={content.page.home.hero.link}
       />
+      <ContrastContainer noBackground id="work">
+        <FigmaBoard />
+      </ContrastContainer>
       <ContentContainer>
-        <Container id="work">
-          <SubHeading>{content.page.home.work.title}</SubHeading>
+        <Container>
           {content.page.home.work.list.map((item, index) => (
             <Block {...item} key={index} />
           ))}
