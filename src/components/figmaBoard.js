@@ -9,7 +9,7 @@ import Block from "../components/block"
 
 const Board = styled.div`
   width: 100%;
-  background: white;
+  background: #f7f9fa;
   box-shadow: 2px 2px 20px #88888821;
   @media (max-width: 900px) {
     max-width: 520px;
@@ -70,6 +70,15 @@ const ShapeText = styled.p`
   margin: 0;
 `
 
+const ShapeTriangle = styled.div`
+  width: 0;
+  height: 0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-bottom: 100px solid #ffffff94;
+  transform: scale(0.15) rotate(-45deg) translate(5px, -24px);
+`
+
 const ShapeStar = styled.div`
   margin: 50px 0;
   position: relative;
@@ -122,6 +131,7 @@ const BoardContents = styled.div`
 `
 
 const AnnotationsContainer = styled.div`
+  width: 140px;
   display: block;
   @media (max-width: 545px) {
     display: none;
@@ -130,10 +140,17 @@ const AnnotationsContainer = styled.div`
 
 const Annotations = styled.div`
   height: 272px;
-  margin-bottom: 18px;
+  margin-bottom: 26px;
   padding-right: 8px;
   border-right: 1px solid #bbbbbb;
   margin-right: 35px;
+  line-height: 18px;
+`
+
+const AnnotationText = styled.p`
+  font-size: 14px;
+  font-weight: 700;
+  color: #818181;
 `
 
 const ImageContainer = styled.div`
@@ -188,7 +205,9 @@ const FigmaBoard = ({}) => {
       <Header />
       <Toolbar>
         <ToolContainer></ToolContainer>
-        <ToolContainer background="blue"></ToolContainer>
+        <ToolContainer background="blue">
+          <ShapeTriangle />
+        </ToolContainer>
         <ToolContainer>
           <ShapeSquare />
         </ToolContainer>
@@ -208,10 +227,10 @@ const FigmaBoard = ({}) => {
       <BoardContents>
         <AnnotationsContainer>
           <Annotations>
-            <p>Camera flow</p>
+            <AnnotationText>Camera flow</AnnotationText>
           </Annotations>
           <Annotations>
-            <p>Unhappy path</p>
+            <AnnotationText>Unhappy path</AnnotationText>
           </Annotations>
         </AnnotationsContainer>
         <ImageContainer>
@@ -237,7 +256,7 @@ const FigmaBoard = ({}) => {
           <Block
             title="Overcoming the challenges of designing a B2B2C product"
             date="May 2021"
-            description="Reflecting back on my design process"
+            description="Reflecting back on my design process."
             linkText="Read more"
             link="https://charlottesferruzza.medium.com/overcoming-the-challenges-of-designing-a-b2b2c-product-1274498738d7"
           />
