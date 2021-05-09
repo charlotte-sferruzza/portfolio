@@ -12,6 +12,15 @@ export default {
         title: "",
         list: [
           {
+            title: "Overcoming the challenges of designing a B2B2C product",
+            date: "May 2021",
+            description:
+              "My design process and learnings after four years at Onfido.",
+            linkText: "Read more",
+            link:
+              "https://charlottesferruzza.medium.com/overcoming-the-challenges-of-designing-a-b2b2c-product-1274498738d7",
+          },
+          {
             title: "Building a culture of accessibility at Onfido",
             date: "January 2020",
             description:
