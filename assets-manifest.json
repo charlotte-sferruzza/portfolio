@@ -1,4 +1,8 @@
 {
   "main.js": "render-page.js",
-  "render-page.js.map": "render-page.js.map"
+  "render-page.js.map": "render-page.js.map",
+  "static/screen1.png": "static/screen1-94cca64a7a16d7aeac03756d1814dd1d.png",
+  "static/screen2.png": "static/screen2-21277d996bc9946accfd68ff8c3982e8.png",
+  "static/screen3.png": "static/screen3-92802b603ceb1c233ebb56d7e613c3cf.png",
+  "static/screen4.png": "static/screen4-07f3487b2edf5773e61db8715a3859a4.png"
 }
